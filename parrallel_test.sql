@@ -1,0 +1,6 @@
+-- Strategy for Isolation.
+-- 1. Connect to pg as normal.
+-- 2. Generate a random string of characters.
+-- 3. Create a new user (role) with that name.
+-- 4. Create a new schema with that name.
+-- 5. Tell our test file to connect to the DB with that name.
