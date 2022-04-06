@@ -7,7 +7,7 @@ SHOW data_directory;
 SHOW oid, datname
 FROM pg_database;
 
--- Shows information database objects from the store
+-- Shows information about database objects from the store
 SHOW * FROM pg_class;
 
 -- Heap or Heap File: File that contains all the data (rows) of our table
@@ -70,7 +70,7 @@ SELECT pg_size_pretty(pg_relation_size("<table_name/index_name>"));
 
 -- Query to show all the indexes in a database
 SELECT relname, relkind
-FROM pg_class 
+FROM pg_class -- pg_class is a postgres table that holds all database objects
 WHERE relkind = 'i';
 
 -- An extension is a piece of code that gives us additional functionality in postgres
